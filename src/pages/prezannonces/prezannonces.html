@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PrezavisPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Liste de mes annonces</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card>
+    	<ion-card-content>
+      	<img class = "imgprez" data-src="http://atypikhousegilberttest.ngrok.io/img/houses/{{house.photo}}" />
+    	</ion-card-content>
+
+			<p class = "nom">{{ house.title }} </p>
+			<p>Prix {{ house.price }} €/ nuit</p>
+			<p>Type de bien : {{house.category.category}}</p>
+			<p>Disponible du : {{house.start_date | date: 'dd/MM/yyyy'}} au {{house.end_date | date: 'dd/MM/yyyy'}}</p>
+			<div *ngFor="let houseproprietes of proprietes">
+				<p>{{houseproprietes.propriete}}</p>
+			</div>
+			<p class = "description-annonce">{{ house.description }}</p>
+			<p>Annulation gratuite !</p>
+			<p> Location: {{house.adresse}}</p>
+			<p> Telephone: {{house.phone}}</p>
+			<p>Pour {{house.nb_personnes}} personne(s) maximum</p>
+			<p>Adresse mail de l'annonceur: {{house.user.email}}</p>
+  	</ion-card>
+</ion-content>

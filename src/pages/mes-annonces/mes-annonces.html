@@ -1,0 +1,27 @@
+<!--
+  Generated template for the MesCommandesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>mes annonces</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let house of houses">
+    	<ion-card-content>
+				<img data-src="http://atypikhousegilberttest.ngrok.io/img/houses/{{house.photo}}"/>
+    	</ion-card-content>
+
+    	<ion-item>
+			<h1>{{house.title}}</h1>
+      		<button ion-button clear item-end (click)="voir(house)">Voir</button>
+    	</ion-item>
+  	</ion-card>
+</ion-content>

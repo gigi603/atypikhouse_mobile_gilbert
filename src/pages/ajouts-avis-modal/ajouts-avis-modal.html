@@ -1,0 +1,58 @@
+<!--
+  Generated template for the AjoutsAvisModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>AjoutsAvisModal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <p class = 'intro'>
+        veuillez choisir une location.
+      </p>
+      <ion-item id = 'select'>
+        <ion-label>Mes reservations</ion-label>
+        <ion-select [(ngModel)]="myComment.house_id" submitText="Okay" cancelText="Annuler">
+          <ion-option *ngFor="let reservation of reservations" value="{{reservation.house_id}}">{{reservation.house.title}} de {{reservation.start_date}} - {{reservation.end_date}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <p class = 'intro'>
+        donner une note :
+      </p>
+      <form (ngSubmit)="postComment()" method="POST">
+        <ion-item id = 'selectnote'>
+          <ion-label>Notes</ion-label>
+          <ion-select [(ngModel)]="myComment.note" name="note" submitText="Okay" cancelText="Annuler">
+            <ion-option value="0">0</ion-option>
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+          </ion-select>
+        </ion-item>
+        <p class = 'intro'>
+          donner votre avis:
+        </p>
+        <ion-item>
+          <ion-label color="primary" fixed></ion-label>
+          <ion-textarea type="text"[(ngModel)]="myComment.comment" name="comment" placeholder="Votre avis" border="solid"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <!-- <ion-input type="text"  value="{{reservation.house.id}}"></ion-input> -->
+          <!-- <input type='hidden' name='_method' value='POST'> -->
+        </ion-item>
+        <button ion-button block type="submit">valider</button>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+
+  <button id = "retourButton" ion-button navPop>Retour</button>
+</ion-content>

@@ -1,0 +1,21 @@
+
+<ion-content padding>
+  <ion-grid>
+    <img src="assets/imgs/AHlog.png" class="logo"/>
+  </ion-grid>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid padding text-center>
+    <button ion-button  (click)="myLogin()" >Connexion</button>
+  </ion-grid>
+</ion-content>

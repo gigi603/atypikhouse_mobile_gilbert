@@ -1,0 +1,43 @@
+page-home {
+
+}
+
+.navbarlogo{
+	
+	height: 50px;
+	float: left;
+	margin-left: 10px;
+}
+
+#logoutbutton {
+	height: 30px;
+	float: right;
+
+	}
+
+	#homefront{
+		background-image: url("../assets/imgs/d.jpg");
+		backgrount-position: left;
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+		background-position: 100% 0%;
+
+		@media only screen and (device-width: 360px) {
+			.boutonhome {
+				margin-top: 10%;
+			}
+
+			#titlehome {
+				margin-top: 75%;
+			}
+		}
+		@media only screen and (device-width: 375px) {
+			.boutonhome {
+				margin-top: 15%;
+			}
+
+			#titlehome {
+				margin-top: 95%;
+			}
+		}
+	}

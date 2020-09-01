@@ -1,0 +1,24 @@
+page-mes-avis {
+
+#homefront{
+		background-image: url("../assets/imgs/b.jpg");
+		backgrount-position: left;
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+		background-position: 100% 0%;
+
+		@media only screen and (device-width: 360px) {
+			.boutonhome {
+				margin-top: 100%;
+			}
+
+		}
+		@media only screen and (device-width: 375px) {
+			.boutonhome {
+				margin-top: 120%;
+			}
+
+		}
+	}
+
+}
