@@ -1,1 +1,1 @@
-export const apiKey = 'http://atypikhousegilberttest.ngrok.io/api/'
+export const apiKey = 'http://atypikhousegilberttest.eu.ngrok.io/api/'
