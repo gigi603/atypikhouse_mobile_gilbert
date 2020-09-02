@@ -31,9 +31,6 @@ export class PrezcommandesPage {
     this.reservation = navParams.get('reservation');
     this.user = this.storage.get('user');
     this.proprietes = this.reservation.proprietes;
-    //this.category = this.reservation.house.category;
-    console.log(this.reservation)
-    //console.log(this.reservation.category);
   }
 
   ionViewDidLoad() {

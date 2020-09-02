@@ -4,8 +4,6 @@ import { Storage } from '@ionic/storage';
 import {apiKey} from "../../app/apiurls/serverurls.js";
 import { Http , Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { LoginPage } from '../../pages/login/login';
-import { TabsloginPage } from '../../pages/tabslogin/tabslogin';
 
 /*
   Generated class for the AuthProvider provider.
@@ -18,7 +16,6 @@ export class AuthProvider {
   public token: any;
   public rootPage:any;
   constructor(public storage: Storage , public http: Http) {
-    console.log('Hello AuthProvider Provider');
   }
 
   login(user){
@@ -37,7 +34,6 @@ export class AuthProvider {
           let data = res.json();   
           this.token = data.token;
           this.storage.set('token', data.token);
-          console.log(this.token);
           this.http.get(apiKey+'user?token='+this.token).map(res => res.json().result).subscribe(data => {
             this.token = data;
             resolve(this.token)
@@ -52,16 +48,13 @@ export class AuthProvider {
     return new Promise((resolve, reject) => {
       this.storage.get('token').then((value) => {
         this.token = value;
-        console.log('gilbert token =', this.token);
         resolve(this.token);
       }) 
     });        
   }
 
   logout(){
-    console.log(this.token);
     this.token = null;
     this.storage.remove('token');
-    console.log(this.token);
   }
 }

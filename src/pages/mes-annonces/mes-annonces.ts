@@ -30,12 +30,10 @@ export class MesAnnoncesPage {
     public storage: Storage,
     public http: Http) {
       this.user = this.storage.get('user');
-      console.log(this.user);
       this.getHouses();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MesCommandesPage');
   }
 
   comment(){

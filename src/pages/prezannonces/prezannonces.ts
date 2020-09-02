@@ -29,9 +29,7 @@ export class PrezannoncesPage {
     public http: Http) {
       this.house = navParams.get('house');
       this.user = this.storage.get('user');
-      console.log(this.house);
       this.proprietes = this.house.proprietes;
-      console.log('proprietes', this.proprietes);
   }
 
   ionViewDidLoad() {

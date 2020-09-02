@@ -21,13 +21,11 @@ export class CrudProvider {
 
   constructor(public storage: Storage ,
     public http: Http) {
-    console.log('Hello CrudProvider Provider');
   }
 
   postAvis(postInfo){
     return new Promise((resolve, reject) => {
      this.storage.get('token').then((value) => {
-      console.log(value);
        let headers = new Headers();
     
         headers.append('Content-Type', 'application/json');
@@ -37,12 +35,8 @@ export class CrudProvider {
         headers.append('Access-Control-Allow-Credentials', 'true');
         headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT,DELETE, OPTIONS');
 
-        console.log('value: ' + value);
-        console.log(postInfo);
         this.http.post(apiKey+'addComment', JSON.stringify(postInfo),  {headers: headers})
           .subscribe(data => {
-            // resolve(data);
-            console.log(data);
           }, (err) => {
             // reject(err);
           }); 

@@ -32,8 +32,6 @@ data = [];
     }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MesAlertesPage');
-
   }
 
   getAlertes(){
@@ -47,12 +45,7 @@ data = [];
       headers.append('Access-Control-Allow-Credentials', 'true');
       this.http.get(apiKey+'user_messages/'+res.id).map(res => res.json())
         .subscribe(data => {
-          // console.log("coco");
           this.alertes = data;
-          console.log(this.alertes);
-          // this.navCtrl.push(MesAlertesPage, {
-          //   alertes:data
-          // });
       });
     })
   }

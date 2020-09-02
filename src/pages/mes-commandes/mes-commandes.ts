@@ -27,7 +27,6 @@ export class MesCommandesPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MesCommandesPage');
   }
 
   voir(reservation){

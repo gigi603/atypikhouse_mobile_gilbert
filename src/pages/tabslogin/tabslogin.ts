@@ -17,11 +17,8 @@ export class TabsloginPage {
   tab3Root = ContactPage;
 
   constructor(public storage: Storage, public authService: AuthProvider) {
-    console.log('coucou');
     this.authService.checkAuthentication().then((res)=>{
-      console.log('res =', res);
       if (res === '' || res === null) {
-        console.log('res ====')
         this.rootPage  = LoginPage;
       } else {
         this.rootPage  = TabsloginPage;

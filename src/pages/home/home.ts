@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, App } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../login/login';
-import { TabsloginPage } from '../tabslogin/tabslogin';
 import { MesAlertesPage } from '../mes-alertes/mes-alertes';
 import { MesAvisPage } from '../mes-avis/mes-avis';
 import { MesAnnoncesPage } from '../mes-annonces/mes-annonces';
@@ -29,9 +28,6 @@ export class HomePage {
   myLogout(){
     this.authService.logout();
     this.app.getRootNav().setRoot(LoginPage);
-    // this.navCtrl.push(LoginPage);
-    console.log(this.token);
-   
   }
 
   GoNotifications(){

@@ -24,9 +24,7 @@ export class MyApp {
     });
 
     this.authService.checkAuthentication().then((res)=>{
-      console.log('res =', res);
       if (res === '' || res === null) {
-        console.log('res ====')
         this.rootPage = LoginPage;
       } else {
         this.rootPage = TabsloginPage;

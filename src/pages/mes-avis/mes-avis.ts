@@ -34,7 +34,6 @@ export class MesAvisPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MesAvisPage');
   }
 
   ajoutAvis(){
@@ -42,13 +41,6 @@ export class MesAvisPage {
   let modal = this.modalCtrl.create('AjoutsAvisModalPage');
     modal.present();
   }
-
-  //  voirAvis(data) {
-  //    console.log(data);
-  //   this.navCtrl.push(PrezavisPage, {
-  //     avis:data
-  //   });
-  // }
 
   voirAvis(){
     this.storage.get("user").then((res)=>{
@@ -62,7 +54,6 @@ export class MesAvisPage {
       this.http.get(apiKey+'user/comments/'+res.id).map(res => res.json())
         .subscribe(comments => {
           this.avis = comments;
-          console.log(comments);
           this.navCtrl.push(PrezavisPage, {
             comments:comments
           });

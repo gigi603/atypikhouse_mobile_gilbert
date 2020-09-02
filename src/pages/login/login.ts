@@ -7,9 +7,6 @@ import 'rxjs/add/operator/map';
 
 import { AuthProvider } from '../../providers/auth/auth';
 import { TabsloginPage } from '../tabslogin/tabslogin';
-import { HomePage } from '../home/home';
-//import { HebergementsPage } from '../hebergements/hebergements';
-
 
 
 /**
