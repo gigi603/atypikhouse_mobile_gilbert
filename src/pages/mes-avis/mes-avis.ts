@@ -44,7 +44,6 @@ export class MesAvisPage {
   }
 
   //  voirAvis(data) {
-  //    console.log("goku");
   //    console.log(data);
   //   this.navCtrl.push(PrezavisPage, {
   //     avis:data

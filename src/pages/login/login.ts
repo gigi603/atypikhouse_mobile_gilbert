@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 
 import { AuthProvider } from '../../providers/auth/auth';
 import { TabsloginPage } from '../tabslogin/tabslogin';
+import { HomePage } from '../home/home';
 //import { HebergementsPage } from '../hebergements/hebergements';
 
 
@@ -77,17 +78,10 @@ export class LoginPage {
         this.navCtrl.push(TabsloginPage, {
           user : result,
         });
-        // this.navCtrl.setRoot(TabsloginPage);
-
+        this.navCtrl.setRoot(TabsloginPage);
       }, (err) => {
       this. errorFunc('Votre identifiant ou votre mot de passe est incorrect')
       });
-  }
-}
-
-
-  myLogout(){
-    this.authService.logout();
-    this.navCtrl.push(LoginPage);
+    }
   }
 }
