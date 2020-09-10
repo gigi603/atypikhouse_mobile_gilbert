@@ -19,7 +19,7 @@
       <ion-item id = 'select'>
         <ion-label>Mes reservations</ion-label>
         <ion-select [(ngModel)]="myComment.house_id" submitText="Okay" cancelText="Annuler">
-          <ion-option *ngFor="let reservation of reservations" value="{{reservation.house_id}}">{{reservation.house.title}} de {{reservation.start_date}} - {{reservation.end_date}}</ion-option>
+          <ion-option *ngFor="let reservation of reservations" value="{{reservation.house_id}}">{{reservation.house.title}}</ion-option>
         </ion-select>
       </ion-item>
       <p class = 'intro'>
